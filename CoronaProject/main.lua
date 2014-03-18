@@ -21,7 +21,7 @@ local function timerEvent(event)
         local fontSize = 16 -- math.random(14, 18)
         local text = randomString(12, 28)
         local textMessage = display.newText(text, posX, posY, native.systemFont, fontSize)
-        textMessage:setTextColor(0, 255, 0) -- Green
+        textMessage:setFillColor(0, 255, 0) -- Green
         audio.play(beep, { duration=20 })
         table.insert(textItems, textMessage)
     end
@@ -45,5 +45,7 @@ local function main()
         timerID = timer.performWithDelay(timerInterval, timerEvent, timerIterations)
     end)
 end
+
+math.randomseed(os.time())
 
 main()
