@@ -44,6 +44,13 @@ local function main()
         removeAllText()
         timerID = timer.performWithDelay(timerInterval, timerEvent, timerIterations)
     end)
+    Runtime:addEventListener('system', function(event)
+        if event.type == 'applicationResume' then
+            timer.cancel(timerID)
+            removeAllText()
+            timerID = timer.performWithDelay(timerInterval, timerEvent, timerIterations)
+        end
+    end)
 end
 
 math.randomseed(os.time())
