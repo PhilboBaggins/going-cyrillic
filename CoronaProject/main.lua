@@ -40,16 +40,15 @@ local function main()
     local timerInterval = 15
     local timerIterations = 150
     local timerID = timer.performWithDelay(timerInterval, timerEvent, timerIterations)
-    Runtime:addEventListener('touch', function(event)
+    local function run(event)
         timer.cancel(timerID)
         removeAllText()
         timerID = timer.performWithDelay(timerInterval, timerEvent, timerIterations)
-    end)
+    end
+    Runtime:addEventListener('touch', run)
     Runtime:addEventListener('system', function(event)
         if event.type == 'applicationResume' then
-            timer.cancel(timerID)
-            removeAllText()
-            timerID = timer.performWithDelay(timerInterval, timerEvent, timerIterations)
+            run(event)
         end
     end)
 end
