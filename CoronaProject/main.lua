@@ -28,13 +28,14 @@ local function timerEvent(event)
 end
 
 local function removeAllText()
-    for key in pairs (textItems) do
+    for key in pairs(textItems) do
         textItems[key]:removeSelf()
         textItems[key] = nil
     end
 end
 
 local function main()
+    math.randomseed(os.time())
     display.setStatusBar(display.HiddenStatusBar)
     local timerInterval = 15
     local timerIterations = 150
@@ -52,7 +53,5 @@ local function main()
         end
     end)
 end
-
-math.randomseed(os.time())
 
 main()
