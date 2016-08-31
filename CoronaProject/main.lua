@@ -18,8 +18,9 @@ end
 
 local function timerEvent(event)
     if math.random() >= 0.23 then
+        local NUM_ROWS = 22
         local posX = math.random(-20, display.contentWidth)
-        local posY = math.random(0, display.contentHeight)
+        local posY = math.round(math.random(0, NUM_ROWS)) * display.contentHeight / (NUM_ROWS - 1)
         local fontSize = 16 -- math.random(14, 18)
         local text = randomString(12, 28)
         local textMessage = display.newText(text, posX, posY, native.systemFont, fontSize)
@@ -39,8 +40,8 @@ end
 local function main()
     math.randomseed(os.time())
     display.setStatusBar(display.HiddenStatusBar)
-    local timerInterval = 15
-    local timerIterations = 150
+    local timerInterval = 20
+    local timerIterations = 100
     local timerID = timer.performWithDelay(timerInterval, timerEvent, timerIterations)
     local function run(event)
         timer.cancel(timerID)
