@@ -2,6 +2,8 @@
 -- Description: Just playing around with and getting used to Corona SDK
 --
 
+-- GLOBALS: math, timer, pairs, string, audio, display, table, native, os, Runtime
+
 local beep = audio.loadSound('beep.wav')
 local textItems = {}
 
