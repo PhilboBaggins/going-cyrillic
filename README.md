@@ -15,4 +15,5 @@ Development todo list
 * [ ] Detect significant shock (e.g. dropped phone) and start app so people think the phone is broken
 * [ ] More realistic text
 * [ ] Alternate more to make it look like a snow crash
-
+* [ ] Instead of drawing on a black screen, consider drawing on a screenshot of the desktop (or other previously visible screen state)
+* [ ] Use actual cyrillic characters
