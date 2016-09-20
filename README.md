@@ -5,7 +5,7 @@ Going Cyrillic
 
 Source: http://www.netlingo.com/word/going-cyrillic.php, http://www.wired.com/1995/12/jargon-watch-33/
 
-This app is a simulator of that effect. It draws random (green) characters on a black screen while making a delightfully horrible noise.
+This app is a simulator of that effect. It draws random green characters on a black screen while making a delightfully horrible noise.
 
 
 
